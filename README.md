@@ -13,10 +13,27 @@ Currently there is no code available - we plan to use this repo to share the scr
 ## Data Sources
 We are currently applying to CPRD for access to data to complete this project. 
 
-## License
-This project is licensed under the [MIT License](https://github.com/HFAnalyticsLab/CMD_multimorbidity/blob/master/LICENSE).
+## How does it work?
+
+As the data used for this analysis is not publically available, the code cannot be used to replicate the analysis on this dataset. However, with modifications the code will be able to be used on other patient-level CPRD extracts.
+
+### Requirements
+
+TBC
+
+### Getting started
+
+TBC
+
+## Useful references
+
+TBC
 
 ## Authors - please feel free to get in touch
 
 * Karen Hodgson, PhD - [on github](https://github.com/KarenHodgson) / [on twitter](https://twitter.com/KarenHodgePodge)
 * Mai Stafford, PhD - [on twitter](https://twitter.com/stafford_xm)
+* Will Parry, PhD
+
+## License
+This project is licensed under the [MIT License](https://github.com/HFAnalyticsLab/CMD_multimorbidity/blob/master/LICENSE).
