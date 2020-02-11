@@ -1,0 +1,14 @@
+read,Rx,logic,special,USAGE DEFINITION
+99999,,,,Read code ever recorded
+365,4,OR,,Read code in last 12 months OR = 4 anxiolytic/hypnotic prescriptions in last 12 months
+99999,1,AND,,Read code ever recorded AND any prescription in the last 12 months.
+1826,,,Y,Read code [first] recorded in last 5 years
+,,,Y,The best (highest value) of the last 2 eGFR readings is < 60 mL/min
+,4,,,4 or more laxative prescriptions in last year
+365,4,OR,,Read code recorded in last 12 months OR >=4 anti-depressant prescriptions (excluding low dose tricyclics) in last 12 months
+99999,1,AND,,Read code ever recorded AND antiepileptic prescription in last 12 months
+99999,4,OR,,Read code ever recorded OR 4 or more antispasmodic prescription only in the last 12 months
+,4,,,4 or more prescription only medicine anti-migraine prescriptions in last year
+,4,OR,Y,4 or more POM analgesics in last 12 months OR ( 4 or more  specified anti-epileptics in last 12 months in the absence of an epilepsy Read code ever recorded)
+99999,4,AND,,Read code ever recorded AND = 4 related prescriptions in last 12 months (excluding simple emollients)
+99999,1,OR,Y,Read code ever recorded OR Lithium ever recorded
