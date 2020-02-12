@@ -1,0 +1,63 @@
+Code	Consultation Type
+0	Data Not Entered
+1	Clinic
+2	Night visit, Deputising service
+3	Follow-up/routine visit
+4	Night visit, Local rota
+5	Mail from patient
+6	Night visit , practice
+7	Out of hours, Practice
+8	Out of hours, Non Practice
+9	Surgery consultation
+10	Telephone call from a patient
+11	Acute visit
+12	Discharge details
+13	Letter from Outpatients
+14	Repeat Issue
+15	Other
+16	Results recording
+17	Mail to patient
+18	Emergency Consultation
+19	Administration
+20	Casualty Attendance
+21	Telephone call to a patient
+22	Third Party Consultation
+23	Hospital Admission
+24	Children's Home Visit
+25	Day Case Report
+26	GOS18 Report
+27	Home Visit
+28	Hotel Visit
+29	NHS Direct Report
+30	Nursing Home Visit
+31	Residential Home Visit
+32	Twilight Visit
+33	Triage
+34	Walk-in Centre
+35	Co-op Telephone advice
+36	Co-op Surgery Consultation
+37	Co-op Home Visit
+38	Minor Injury Service
+39	Medicine Management
+40	Community Clinic
+41	Community Nursing Note
+42	Community Nursing Report
+43	Data Transferred from other system
+44	Health Authority Entry
+45	Health Visitor Note
+46	Health Visitor Report
+47	Hospital Inpatient Report
+48	Initial Post Discharge Review
+49	Laboratory Request
+50	Night Visit
+51	Radiology Request
+52	Radiology Result
+53	Referral Letter
+54	Social Services Report
+55	Telephone Consultation
+56	Template Entry
+57	GP to GP communication transaction
+58	Non-consultation medication data
+59	Non-consultation data
+60	ePharmacy message
+61	Extended Hours

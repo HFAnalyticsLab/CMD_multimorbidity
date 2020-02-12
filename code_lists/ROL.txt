@@ -1,0 +1,71 @@
+Code	Role of Staff
+0	Data Not Entered
+1	Senior Partner
+2	Partner
+3	Assistant
+4	Associate
+5	Non-commercial local rota of less than 10 GPs
+6	Commercial Deputising service
+7	Locum
+8	GP Registrar
+9	Consultant
+10	Sole Practitioner
+11	Practice Nurse
+12	Health Visitor
+13	Community Nurse
+14	Midwife
+15	Community Psychiatric Nurse
+16	Social Worker
+17	Pharmacist
+18	Dispenser
+19	Non-qualified Dispenser
+20	Practice Manager
+21	Fund Manager
+22	Business Manager
+23	Administrator
+24	Secretary
+25	Receptionist
+26	Physiotherapist
+27	Chiropodist
+28	Dentist
+29	Dietician
+30	Counsellor
+31	Osteopath
+32	Maintenance staff
+33	Other Health Care Professional
+34	Hospital Nurse
+35	Community Medical Officer
+36	School Nurse
+37	Health Education Officer
+38	Contact Tracing Nurse
+39	Stomatherapist
+40	Computer Manager
+41	Interpreter/Link Worker
+42	Chiropractor
+43	Acupuncturist
+44	Homeopath
+45	Mental Handicap Nurse
+46	Carer
+47	Salaried Partner
+48	Occupational Therapist
+49	Speech Therapist
+50	GP Retainer
+51	Phlebotomist
+52	Other Medical & Dental
+53	Other Students
+54	Other Nursing & Midwifery
+55	Other Allied Health Professionals
+56	Other Professional Scientific & Technical
+57	Other Healthcare Scientists
+58	Other Additional Clinical Services
+59	Other Admin & Clerical
+60	Clinical Practitioner Access Role
+61	Nurse Access Role
+62	Nurse Manager Access Role
+63	Health Professional Access Role
+64	Healthcare Student Access Role
+65	Biomedical Scientist Access Role
+66	Clinical Coder Access Role
+67	Optometrist
+68	Radiographer
+

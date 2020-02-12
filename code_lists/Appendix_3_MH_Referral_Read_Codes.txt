@@ -1,0 +1,42 @@
+code	coding_system	description	entity	list_name	upload_date
+64R7.11	Read	Child refer- clinical psychol.	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H23.00	Read	Admit psychiatric emergency	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H23000	Read	Emerg psychiatric admiss MHA	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H2L.00	Read	Admit psychogeriatric emergency	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H2T.00	Read	Emergency voluntary psychiatric admission Mental Health Act	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H38.00	Read	Non-urgent psychiatric admisn.	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H3Q.00	Read	Non-urgent psychogeriatric admission	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H49.00	Read	Psychiatric referral	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H4D.00	Read	Referral to psychogeriatrician	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H4f.00	Read	Referral to learning disabilities psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H4P.00	Read	Referral to child psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+8H7T.00	Read	Refer to psychologist	diagnostic	716 - res69: MHS referrals	05/10/2018
+8Hc..00	Read	Referral to mental health team	diagnostic	716 - res69: MHS referrals	05/10/2018
+8Hc0.00	Read	Referral to community mental health team	diagnostic	716 - res69: MHS referrals	05/10/2018
+8Hc2.00	Read	Referral to primary care mental health team	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HHn.00	Read	Referral to non NHS mental health community service	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HHo.00	Read	Referral to older age communiy mental health team	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HHR.00	Read	Referral to child and adolescent psychiatry service	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HHs.00	Read	Referral to psychosis early intervention service	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HHT.00	Read	Referral to psychotherapist	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HHu.00	Read	Referral to primary care mental health gateway worker	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HHv.00	Read	Referral to primary care mental health graduate worker	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HJ3.00	Read	Psychiatric self-referral	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HlB.00	Read	Urgent referral to psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HlD.00	Read	Referral to forensic psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HVi.00	Read	Private referral to psychologist	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HVO.00	Read	Private referral to psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+8HVS.00	Read	Private referral to psychogeriatrician	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL5B.00	Read	Referral to psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL5B100	Read	Referral to child and adolescent psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL5B111	Read	Referral to child psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL5B200	Read	Referral to forensic psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL5B300	Read	Referral to liaison psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL5B400	Read	Referral to rehabilitation psychiatrist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL5B500	Read	Referral to psychiatrist for mental handicap	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL62A00	Read	Referral to nurse behavioural therapist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL62B00	Read	Referral to nurse psychotherapist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL62E00	Read	Referral to psychiatric nurse	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL77.00	Read	Referral to psychotherapist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL78.00	Read	Referral to psychologist	diagnostic	716 - res69: MHS referrals	05/10/2018
+ZL78.11	Read	Refer to psychologist	diagnostic	716 - res69: MHS referrals	05/10/2018
