@@ -43,9 +43,7 @@ descriptions <- list.files(savedir, '*DESCRIPTION*', full.names=T) %>% #list fil
   .[, codes:=strsplit(ALLCODES, split = ';', fixed = T)] %>% #split ALLCODES into vector of codes
   .[, ref:=paste0(`CONDITION CODE`, SCHEMA_NUMBER)] #create a reference code from the condition code and schema number
 
-logicpath <- 'https://raw.githubusercontent.com/HFAnalyticsLab/CMD_multimorbidity/master/code_lists/Appendix_2_Cam_UD_based_logic.csv'
-download.file(logicpath, './Appendix_2_Cam_UD_based_logic.csv') #download logic file
-logic <- fread('./Appendix_2_Cam_UD_based_logic.csv') #read into data table
+logic <- fread('Appendix_1_Cam_UD_based_logic.csv') #read logic file into data table
 
 #'Cam_UD_based_logic.csv' was created from unique values of the USAGE DEFINITION field in the Cambridge descriptions
 #The following additional fields were added...

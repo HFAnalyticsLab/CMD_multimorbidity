@@ -15,11 +15,9 @@ setwd('C:/MyProject/data/') #set the working directory for your project
 
 #Load cohort identification prodcodes and medcodes ----
 
-#'Appendix_1_CMD_Codes_No_Z_Drugs.xlsx' contains our lists of medcodes and prodcodes for defining our study cohorts
-codespath <- 'https://raw.githubusercontent.com/HFAnalyticsLab/CMD_multimorbidity/master/code_lists/Appendix_1_CMD_Codes_No_Z_Drugs.xlsx'
-download.file(codespath, './Appendix_1_CMD_Codes_No_Z_Drugs.xlsx') #download codes file
-medcodes <- read_xlsx('./Appendix_1_CMD_Codes_No_Z_Drugs.xlsx', 'cmd_med_codes') #read medcodes 
-prodcodes <- read_xlsx('./Appendix_1_CMD_Codes_No_Z_Drugs.xlsx', 'cmd_prod_codes') #read prodcodes
+#'Appendix_2_CMD_Codes_No_Z_Drugs.xlsx' contains our lists of medcodes and prodcodes for defining our study cohorts
+medcodes <- read_xlsx('Appendix_2_CMD_Codes_No_Z_Drugs.xlsx', 'cmd_med_codes') #read medcodes 
+prodcodes <- read_xlsx('Appendix_2_CMD_Codes_No_Z_Drugs.xlsx', 'cmd_prod_codes') #read prodcodes
 
 #___________________________________________________________________________________
 
