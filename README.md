@@ -45,7 +45,7 @@ This project is licensed under the [MIT License](https://github.com/HFAnalyticsL
 
 ## Authors - please feel free to get in touch
 
-* Will Parry, PhD - [website](http://willparry.net) / [on github](https://github.com/DrWillParry) / [on twitter](https://twitter.com/DrWillParry)
+* Will Parry, PhD - [website](http://willparry.net) / [on twitter](https://twitter.com/DrWillParry)
 * Karen Hodgson, PhD - [on github](https://github.com/KarenHodgson) / [on twitter](https://twitter.com/KarenHodgePodge)
 * Mai Stafford, PhD - [on twitter](https://twitter.com/stafford_xm)
 
