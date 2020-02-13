@@ -29,7 +29,12 @@ Software or packages that needs to be installed and and how to install them.
 For example:
 These scripts were written in R version (to be added) and RStudio Version 1.1.383. 
 The following R packages (available on CRAN) are needed: 
-* [**tidyverse**](https://www.tidyverse.org/)
+* [**data.table**](https://cran.r-project.org/web/packages/data.table/index.html)
+* [**stringr**](https://cran.r-project.org/web/packages/stringr/)
+* [**purrr**](https://cran.r-project.org/web/packages/purrr/index.html)
+* [**readxl**](https://cran.r-project.org/web/packages/readxl/index.html)
+* [**xml2**](https://cran.r-project.org/web/packages/xml2/index.html)
+* [**rvest**](https://cran.r-project.org/web/packages/rvest/index.html)
 
 ### Getting started
 
@@ -40,6 +45,7 @@ This project is licensed under the [MIT License](https://github.com/HFAnalyticsL
 
 ## Authors - please feel free to get in touch
 
+* Will Parry, PhD - [website](http://willparry.net) / [on github](https://github.com/DrWillParry) / [on twitter](https://twitter.com/DrWillParry)
 * Karen Hodgson, PhD - [on github](https://github.com/KarenHodgson) / [on twitter](https://twitter.com/KarenHodgePodge)
 * Mai Stafford, PhD - [on twitter](https://twitter.com/stafford_xm)
 
