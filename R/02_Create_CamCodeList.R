@@ -31,6 +31,7 @@ files <- str_split(filelinks, "/V11/", simplify=T)[,2] #split the online paths t
 saveas <- map2_chr(savedir, files, paste0) #create filepaths to save to savedir
 map2(filelinks, saveas, download.file) #download the files from Cambridge and save
 map(saveas, unzip) #unzip the zip files
+map(saveas, unzip, exdir = savedir) #unzip the zip files
 map(saveas, unlink) #delete the original zip files
 
 #________________________________________________________________________
