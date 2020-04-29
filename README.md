@@ -30,7 +30,7 @@ As the data used for this analysis is not publically available, the code cannot 
 
 These scripts were written in R version (3.XXX) and RStudio Version 1.1.383. 
 
-The following R packages (available on CRAN) are needed for the data preparation scripts (01 to 08):
+The following R packages (available on CRAN) are needed for the data preparation scripts (01 to 09):
 
 * [**here**](https://cran.r-project.org/package=here)
 * [**data.table**](https://cran.r-project.org/package=data.table)
@@ -39,7 +39,7 @@ The following R packages (available on CRAN) are needed for the data preparation
 * [**rvest**](https://cran.r-project.org/package=rvest)
 * [**readxl**](https://cran.r-project.org/package=readxl)
 
-The following additional R packages (available on CRAN) are needed for the data analysis scripts (09 to 13):
+The following additional R packages (available on CRAN) are needed for the data analysis scripts (10 to 13):
 
 * [**plyr**](https://cran.r-project.org/package=plyr)
 * [**table1**](https://cran.r-project.org/package=table1)
