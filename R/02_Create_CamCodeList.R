@@ -7,12 +7,12 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'xml2', 'purrr', 'rvest', 'stringr', 'data.table') #package list
+pkgs <- c('here', 'xml2', 'tidyverse', 'rvest', 'data.table') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project
 savedir <- here('Lookups', 'Cambridge_files', '/') #create path for saving Cambridge files (need end slash)
-dir.create(savedir, showWarnings = FALSE) #create folder if it doesn't exist
+dir.create(savedir, showWarnings = TRUE, recursive = TRUE) #create folder if it doesn't exist
 
 #_________________________________________________________________________________________
 
@@ -30,7 +30,7 @@ filelinks <- read_html(camsite) %>% #read Cambridge code list web page
 files <- str_split(filelinks, "/V11/", simplify=T)[,2] #split the online paths to extract the filenames
 saveas <- map2_chr(savedir, files, paste0) #create filepaths to save to savedir
 map2(filelinks, saveas, download.file) #download the files from Cambridge and save
-map(saveas, unzip, exdir = savedir) #unzip the zip files
+map(saveas, unzip, exdir = str_sub(savedir, 1, -2)) #unzip the zip files (use sub_str because exdir doesn't like end slashes)
 map(saveas, unlink) #delete the original zip files
 
 #________________________________________________________________________
@@ -67,9 +67,9 @@ codelist <- with(descriptions,
   pmap_dfr(data.table) #send inputs to pmap_dfr to create and join data tables together
 
 codelist[, code:=as.numeric(code)] #convert code to numeric variable (previously character, needed for later use)
+nrow(codelist) == nrow(unique(codelist)) #there seem to be a few spurious repetitions in the original files
+codelist[, .(count = .N), keyby = .(cond, ref, type, code)][count > 1] #view the duplicates
 
-saveRDS(codelist, here('Lookups', 'CamCodeList.rds')) #save to lookups directory
-#nrow(codelist) == nrow(unique(codelist)) #there seem to be a few spurious repetitions in the original files
-
+saveRDS(unique(codelist), here('Lookups', 'CamCodeList.rds')) #save unique rows to lookups directory
 
 

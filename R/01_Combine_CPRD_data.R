@@ -7,7 +7,7 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'data.table', 'stringr', 'purrr') #package list
+pkgs <- c('here', 'data.table', 'tidyverse') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project
@@ -20,19 +20,11 @@ datafolders <- dir(path = rawCPRDdata, pattern = 'D042.\\d_extract', full.names 
 #Create function to read and bind data tables together depending on type ----
 
 createDT <- function(type, datafolder, saveas, keepcols){
-  
-  savepath <- here('Data', paste0(saveas, str_sub(datafolder, -9), '.csv')) #build savepath (last 9 characters of folder names are years: 2008-2009, etc.)
-  
+  savepath <- here('Data', paste0(saveas, str_sub(datafolder, -9), '.csv')) #build savepath (last 9 chars of folder names are years: 2008-2009, etc.)
   flist <- type %>% list.files(path = datafolder, pattern = ., full.names = T) #list files in folder of type 
-    
-  if(file.exists(savepath) | length(flist)==0){ #if files already combined or there is no CPRD data available...
-    return(NULL) #return NULL and end function
-  } #otherwise...
-  
   flist %>% map(fread, select = keepcols) %>% rbindlist(fill = T) %>% #read files and bind them together
     fwrite(file = savepath) #write combined data to savepath
   gc() #clean up memory
-
 }
 
 #_________________________________________________________________________________
@@ -49,9 +41,12 @@ for(i in datafolders){ #for each of the years of CPRD data contained in separate
   
   #we've commented out most of the types so that we can run them one at a time...
   
-   createDT(type = 'Extract_Clinical', datafolder = i, saveas = 'clinical', #many very large files
-            keepcols = c('patid', 'eventdate', 'medcode'))
-  # 
+  createDT(type = 'Extract_Clinical', datafolder = i, saveas = 'clinical', #many very large files
+            keepcols = c('patid', 'eventdate', 'medcode', 'adid'))
+  #														
+  # createDT(type = 'Extract_Additional', datafolder = i, saveas = 'additional', 
+  #          keepcols = c('patid', 'enttype', 'adid', 'data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'data7'))
+  #
   # createDT(type = 'Extract_Consultation', datafolder = i, saveas = 'consult', #many very large files
   #          keepcols = c('patid', 'eventdate', 'constype', 'staffid', 'duration'))
   # 

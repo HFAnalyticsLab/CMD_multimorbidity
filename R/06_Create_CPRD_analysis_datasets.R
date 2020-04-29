@@ -7,7 +7,7 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'purrr', 'data.table') #package list
+pkgs <- c('here', 'tidyverse', 'data.table') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project
@@ -96,7 +96,7 @@ gc() #clean up memory
 prodtodrug <- fread(here('Lookups','product.txt'))[ #read in prodcode to drug substance lookup file
                 , .(prodcode, productname, drugsubstance, bnfchapter)] #keep only the columns needed
 
-#NB: there are some drugs in the Appendix_3_Psych_Prod_Codes list that do not have a matching drug substance in the prodtodrug lookup
+#NB: there are some drugs in the Appendix_4_Psych_Prod_Codes list that do not have a matching drug substance in the prodtodrug lookup
 psychprods <- fread(here('Lookups', 'Appendix_4_Psych_Prod_Codes.txt')) %>% #read in list of codes for psychiatric drugs we are interested in
                 .[, .(prodcode, psych = TRUE)] #keep just the prodcode but add a flag for when merged with therapy below
 
@@ -136,6 +136,8 @@ saveRDS(psych_bnfchapter_type, here('Data','Var_freq_checking','psych_bnfchapter
 #Coding ethnicity ----
 
 #Using CPRD clinical data...
+#CPRD ethnicity codings (ethcodes) from doi: 10.2337/dc16-1616
+#https://clinicalcodes.rss.mhs.man.ac.uk/medcodes/article/56/codelist/res56-ethnicity/
 
 ethcodes <- fread(here('Lookups', 'res56-ethnicity.csv')) [, .(readcode, ethnic5)] %>% #read in ethnicity read codes
                     merge(readtomed, by = 'readcode', all.x = TRUE) #join on readtomed

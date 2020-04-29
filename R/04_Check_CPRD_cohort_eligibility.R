@@ -7,7 +7,7 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'readxl', 'data.table', 'purrr') #package list
+pkgs <- c('here', 'readxl', 'data.table', 'tidyverse') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project

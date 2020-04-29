@@ -1,0 +1,133 @@
+code,coding_system,description,entity,list_name,upload_date,ethnicity classification
+9i0..00,Read,British or mixed British - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i00.00,Read,White British - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i1..00,Read,Irish - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i10.00,Read,White Irish - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2..00,Read,Other White background - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i20.00,Read,English - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i21.00,Read,Scottish - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i22.00,Read,Welsh - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i26.00,Read,Cypriot (part not stated) - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i27.00,Read,Greek - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i28.00,Read,Greek Cypriot - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i29.00,Read,Turkish - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2A.00,Read,Turkish Cypriot - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2B.00,Read,Italian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2C.00,Read,Irish Traveller - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2D.00,Read,Traveller - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2E.00,Read,Gypsy/Romany - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2F.00,Read,Polish - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2H.00,Read,Commonwealth (Russian) Indep States - ethn categ 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2J.00,Read,Kosovan - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2K.00,Read,Albanian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2P.00,Read,Other republics former Yugoslavia - ethnic categ 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2R.00,Read,Oth White European/European unsp/Mixed European 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2S.00,Read,Other mixed White - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i2T.00,Read,Other White or White unspecified ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9i3..00,Read,White and Black Caribbean - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i4..00,Read,White and Black African - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i5..00,Read,White and Asian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i6..00,Read,Other Mixed background - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i60.00,Read,Black and Asian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i61.00,Read,Black and Chinese - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i62.00,Read,Black and White - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i63.00,Read,Chinese and White - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i64.00,Read,Asian and Chinese - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9i7..00,Read,Indian or British Indian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9i8..00,Read,Pakistani or British Pakistani - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9i9..00,Read,Bangladeshi or British Bangladeshi - ethn categ 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9iA..00,Read,Other Asian background - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9iA3.00,Read,East African Asian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iA4.00,Read,Sri Lankan - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9iA5.00,Read,Tamil - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9iA6.00,Read,Sinhalese - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9iA7.00,Read,Caribbean Asian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iA8.00,Read,British Asian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9iA9.00,Read,Mixed Asian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9iB..00,Read,Caribbean - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9iC..00,Read,African - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9iD..00,Read,Other Black background - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9iD0.00,Read,Somali - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9iD1.00,Read,Nigerian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9iD2.00,Read,Black British - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9iE..00,Read,Chinese - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iF..00,Read,Other - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iF0.00,Read,Vietnamese - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iF1.00,Read,Japanese - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iF2.00,Read,Filipino - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iF3.00,Read,Malaysian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iF9.00,Read,Arab - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iFA.00,Read,North African - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iFB.00,Read,Mid East (excl Israeli; Iranian & Arab) - eth cat 2001 cens,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iFD.00,Read,Iranian - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iFE.00,Read,Kurdish - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iFG.00,Read,Latin American - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iFH.00,Read,South and Central American - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iFJ.00,Read,Mauritian/Seychellois/Maldivian/St Helena eth cat 2001census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9iFK.00,Read,Any other group - ethnic category 2001 census,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9S1..00,Read,White,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9S10.00,Read,White British,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9S11.00,Read,White Irish,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9S13.00,Read,White Scottish,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9S14.00,Read,Other white British ethnic group,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9S2..00,Read,Black Caribbean,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S3..00,Read,Black African,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S4..00,Read,Black; other; non-mixed origin,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S41.00,Read,Black British,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S42.00,Read,Black Caribbean/W.I./Guyana,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S42.11,Read,Black Caribbean,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S42.12,Read,Black West Indian,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S42.13,Read,Black Guyana,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S43.00,Read,Black N African/Arab/Iranian,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S43.11,Read,Black North African,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S43.12,Read,Black Arab,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S43.13,Read,Black Iranian,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S44.00,Read,Black - other African country,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S45.00,Read,Black E Afric Asia/Indo-Caribb,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S45.11,Read,Black East African Asian,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S45.12,Read,Black Indo-Caribbean,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S47.00,Read,Black - other Asian,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S48.00,Read,Black Black - other,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S5..00,Read,Black - other; mixed,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9S51.00,Read,Other Black - Black/White orig,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9S52.00,Read,Other Black - Black/Asian orig,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9S6..00,Read,Indian,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9S7..00,Read,Pakistani,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9S8..00,Read,Bangladeshi,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9S9..00,Read,Chinese,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA..00,Read,Other ethnic non-mixed (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA2.00,Read,Brit. ethnic minor. unsp (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA3.00,Read,Caribbean I./W.I./Guyana (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9SA3.11,Read,Caribbean Island (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9SA3.12,Read,West Indian (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9SA3.13,Read,Guyana (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9SA4.00,Read,N African Arab/Iranian (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA4.11,Read,North African Arab (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA4.12,Read,Iranian (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA5.00,Read,Other African countries (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9SA6.00,Read,E Afric Asian/Indo-Carib (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA6.11,Read,East African Asian (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA6.12,Read,Indo-Caribbean (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SA7.00,Read,Indian sub-continent (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9SA8.00,Read,Other Asian (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9SA9.00,Read,Irish (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,White
+9SAA.00,Read,Greek/Greek Cypriot (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SAA.11,Read,Greek (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SAA.12,Read,Greek Cypriot (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SAB.00,Read,Turkish/Turkish Cypriot (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SAB.11,Read,Turkish (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SAB.12,Read,Turkish Cypriot (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SAC.00,Read,Other European (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SAD.00,Read,Other ethnic NEC (NMO),diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SB..00,Read,Other ethnic; mixed origin,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9SB1.00,Read,Other ethnic; Black/White orig,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9SB2.00,Read,Other ethnic; Asian/White orig,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9SB3.00,Read,Other ethnic; mixed white orig,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9SB4.00,Read,Other ethnic; other mixed orig,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9SB5.00,Read,Black Caribbean and White,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9SB6.00,Read,Black African and White,diagnostic,646 - res56: ethnicity,2017-03-16,Mixed
+9SC..00,Read,Vietnamese,diagnostic,646 - res56: ethnicity,2017-03-16,Other
+9SG..00,Read,Other black ethnic group,diagnostic,646 - res56: ethnicity,2017-03-16,Black/Black British
+9SH..00,Read,Other Asian ethnic group,diagnostic,646 - res56: ethnicity,2017-03-16,Asian/British Asian
+9SI..00,Read,Irish traveller,diagnostic,646 - res56: ethnicity,2017-03-16,White
+9SJ..00,Read,Other ethnic group,diagnostic,646 - res56: ethnicity,2017-03-16,Other
