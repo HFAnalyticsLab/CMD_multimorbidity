@@ -28,7 +28,7 @@ As the data used for this analysis is not publically available, the code cannot 
 
 ### Requirements
 
-These scripts were written in R version (3.XXX) and RStudio Version 1.1.383. 
+These scripts were written in R version (3.6.2) and RStudio Version 1.2.5033. 
 
 The following R packages (available on CRAN) are needed for the data preparation scripts (01 to 09):
 
@@ -84,6 +84,6 @@ This project is licensed under the [MIT License](https://github.com/HFAnalyticsL
 ## Authors - please feel free to get in touch
 
 * Will Parry, PhD - [website](http://willparry.net) / [on twitter](https://twitter.com/DrWillParry)
-* Karen Hodgson, PhD - [on github](https://github.com/KarenHodgson) / [on twitter](https://twitter.com/KarenHodgePodge)
 * Mai Stafford, PhD - [on twitter](https://twitter.com/stafford_xm)
+* Karen Hodgson, PhD - [on github](https://github.com/KarenHodgson) / [on twitter](https://twitter.com/KarenHodgePodge)
 
