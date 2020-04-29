@@ -1,9 +1,0 @@
-#Compare with previous project - path used in 09_Analysing_cohort_baseline_year.R
-HCUcomorbid <- 'P:/P036 Costing model CPRD/HCU comorbid/Sprint/'
-
-#Smoking and BMI data
-#Need to add data processing scripts to github
-
-#Need to see plotting_outcomes.R - referenced in '13_Analysis_secondary_care_use.R'
-
-#Need to find where 'patient_study_years.rds' is made
