@@ -28,7 +28,7 @@ As the data used for this analysis is not publically available, the code cannot 
 
 ### Requirements
 
-These scripts were written in R version (3.6.2) and RStudio Version 1.2.5033. 
+These scripts were written in R version 3.6.2 and RStudio Version 1.2.5033. 
 
 The following R packages (available on CRAN) are needed for the data preparation scripts (01 to 09):
 
