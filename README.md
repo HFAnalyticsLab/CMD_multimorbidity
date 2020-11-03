@@ -1,6 +1,8 @@
 # Common mental disorders and additional long-term conditions
 
-#### Project Status: In progress
+#### Project Status: Published
+This analysis has been published on the Health Foundation website as a long read, titled:
+[Inequalities in health care for people with depression and/or anxiety](https://www.health.org.uk/publications/long-reads/inequalities-in-health-care-for-people-with-depression-and-anxiety)
 
 ## Project Description
 
@@ -65,26 +67,21 @@ The 'R' folder contains:
 * '04_Check_CPRD_cohort_eligibility.R' - performs a range of basic checks on the data and then identifies which patients meet the study eligibility criteria (based on 'Appendix_2_CMD_Codes_No_Z_Drugs.xlsx' in the 'code_lists' folder).
 
 4. Creating datasets for analysis:
-* '05_Create_CPRD_trends_dataset.R' - joins the cohort eligibility files onto the Cambridge Multimorbidity Score data, HES linkage eligibility, linked IMD and ONS death registration data, to create a dataset for analysis of trends across the 10 study years.
-* '06_Create_CPRD_analysis_datasets.R' - processes CPRD data on consultations, referrals and therapies, to create a dataset for analysis of primary care utilisation during follow-up for the 2015/16 cohort (relevant referrals based on 'Appendix_3_MH_Referral_Read_Codes.txt', relevant therapies based on 'Appendix_4_Psych_Prod_Codes.txt', both in the 'code_lists' folder). Also, harmonises ethnicity codings using both CPRD and HES sources (using 'res56-ethnicity.csv' in the 'code_lists' folder).
+* '05_Create_CPRD_analysis_trends_dataset.R' - joins the cohort eligibility files onto the Cambridge Multimorbidity Score data, HES linkage eligibility, linked IMD and ONS death registration data, to create a dataset for analysis of trends across the 10 study years.
+* '06_Create_CPRD_analysis_dataset.R' - processes CPRD data on consultations, referrals and therapies, to create a dataset for analysis of primary care utilisation during follow-up for the 2015/16 cohort (relevant referrals based on 'Appendix_3_MH_Referral_Read_Codes.txt', relevant therapies based on 'Appendix_4_Psych_Prod_Codes.txt', both in the 'code_lists' folder). Also, harmonises ethnicity codings using both CPRD and HES sources (using 'res56-ethnicity.csv' in the 'code_lists' folder).
 * '07_Create_HES_analysis_dataset.R' - processes HES data on admitted patient care, A&E attendances and outpatient care, to create a dataset for analysis of secondary care utilisation during follow-up for the 2015/16 cohort.
-* '08_Create_ACSC_admissions.R' - identifies which admitted patient care spells were potentially avoidable chronic ambulatory care sensitive emergency admissions, using the method outlined by the [NHS Digital Clinical Indicators Team](https://files.digital.nhs.uk/BB/6DD6C7/CCG_2.6_I00757_S.pdf).
-* '09_Create_HES_linked_outcomes.R' - creates a dataset with a variety of recoded explanatory variables, and primary and secondary care utilisation outcomes for the study cohort in the baseline year (2015/16).
+* '08_Create_CPRD_HES_analysis_dataset.R' - creates a dataset with a variety of recoded explanatory variables, and primary and secondary care utilisation outcomes for the study cohort in the baseline year (2015/16).
 
 5. Analysing the data:
-* '10_Analysing_cohort_baseline_year.R' - analyses the cohort demographics and Cambridge Multimorbidity Score conditions in the study baseline year (2015/16) and compares it to a high-cost cohort from a previous study.
-* '11_Analysis_across_years.R' - analyses trends in Cambridge Multimorbidity Score conditions across the 10 study years.
-* '12_Analysis_primary_care_use.R' - analyses primary care utilisation (including consultations, drug therapies and mental health referrals) in the study baseline year (2015/16).
-* '13_Analysis_secondary_care_use.R' - analyses secondary care utilisation (including inpatient, outpatient and A&E utilisation) in the study baseline year (2015/16).
+* '09_Descriptives_demographics.R' - describes the cohort's demographics, number of conditions and most common long-term conditions 
+* '10_Descriptives_healthcare_use.R' - describes primary and secondary care use in the study baseline year (2015/16).
 
 ## License
 
 This project is licensed under the [MIT License](https://github.com/HFAnalyticsLab/CMD_multimorbidity/blob/master/LICENSE).
 
-## Authors - please feel free to get in touch
+## Code Authors - please feel free to get in touch
 
 * Will Parry, PhD - [website](http://willparry.net) / [on twitter](https://twitter.com/DrWillParry)
 * Mai Stafford, PhD - [on twitter](https://twitter.com/stafford_xm)
 * Karen Hodgson, PhD - [on github](https://github.com/KarenHodgson) / [on twitter](https://twitter.com/KarenHodgePodge)
-
-adding a line
