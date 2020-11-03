@@ -7,11 +7,11 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'readxl', 'data.table', 'tidyverse') #package list
+pkgs <- c('here', 'readxl', 'data.table', 'purrr') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project
-source('filepaths.R') #get folder path for CPRD linkage eligibility data: linkdata
+source(here('filepaths.R')) #get folder path for CPRD linkage eligibility data: linkdata
 savedir <- here('Data', 'Cohort_checking') #create path to save results of checking
 dir.create(savedir, showWarnings = FALSE) #create folder if it doesn't exist
 
