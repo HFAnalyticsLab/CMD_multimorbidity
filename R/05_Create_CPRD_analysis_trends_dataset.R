@@ -7,11 +7,11 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'tidyverse', 'data.table') #package list
+pkgs <- c('here', 'purrr', 'data.table') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project
-source('filepaths.R') #get folder path for linked IMD data: (1) linkdata, (2) moreIMDdata
+source(here('filepaths.R')) #get folder path for linked IMD data: (1) linkdata, (2) moreIMDdata
 
 #_____________________________________________
 
