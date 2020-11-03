@@ -7,18 +7,17 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'data.table', 'tidyverse') #package list
+pkgs <- c('here', 'data.table', 'stringr', 'purrr') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project
-source('filepaths.R') #get folder paths for raw data: (1) rawCPRDdata, (2) clin_medcodes0809
+source(here('filepaths.R')) #get folder paths for raw data: (1) rawCPRDdata, (2) clin_medcodes0809
 datafolders <- dir(path = rawCPRDdata, pattern = 'D042.\\d_extract', full.names = TRUE) #create list of data folders
 #we have several folders for different years of data which are numbered (\\d is regex pattern for single digit)
 
 #____________________________________________________________________________
 
 #Create function to read and bind data tables together depending on type ----
-
 createDT <- function(type, datafolder, saveas, keepcols){
   savepath <- here('Data', paste0(saveas, str_sub(datafolder, -9), '.csv')) #build savepath (last 9 chars of folder names are years: 2008-2009, etc.)
   flist <- type %>% list.files(path = datafolder, pattern = ., full.names = T) #list files in folder of type 
@@ -26,6 +25,7 @@ createDT <- function(type, datafolder, saveas, keepcols){
     fwrite(file = savepath) #write combined data to savepath
   gc() #clean up memory
 }
+
 
 #_________________________________________________________________________________
 
@@ -43,7 +43,7 @@ for(i in datafolders){ #for each of the years of CPRD data contained in separate
   
   createDT(type = 'Extract_Clinical', datafolder = i, saveas = 'clinical', #many very large files
             keepcols = c('patid', 'eventdate', 'medcode', 'adid'))
-  #														
+  
   # createDT(type = 'Extract_Additional', datafolder = i, saveas = 'additional', 
   #          keepcols = c('patid', 'enttype', 'adid', 'data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'data7'))
   #
