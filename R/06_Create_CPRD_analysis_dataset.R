@@ -7,11 +7,11 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'tidyverse', 'data.table') #package list
+pkgs <- c('here', 'purrr', 'data.table','tidyverse') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project
-source('filepaths.R') #get folder path for linked IMD data: (1) linkdata, (2) moreIMDdata
+source(here('filepaths.R')) #get folder path for linked IMD data: (1) linkdata, (2) moreIMDdata
 
 #_________________________________________
 
@@ -96,7 +96,7 @@ gc() #clean up memory
 prodtodrug <- fread(here('Lookups','product.txt'))[ #read in prodcode to drug substance lookup file
                 , .(prodcode, productname, drugsubstance, bnfchapter)] #keep only the columns needed
 
-#NB: there are some drugs in the Appendix_4_Psych_Prod_Codes list that do not have a matching drug substance in the prodtodrug lookup
+#NB: there are some drugs in the Appendix_3_Psych_Prod_Codes list that do not have a matching drug substance in the prodtodrug lookup
 psychprods <- fread(here('Lookups', 'Appendix_4_Psych_Prod_Codes.txt')) %>% #read in list of codes for psychiatric drugs we are interested in
                 .[, .(prodcode, psych = TRUE)] #keep just the prodcode but add a flag for when merged with therapy below
 
@@ -133,11 +133,9 @@ saveRDS(psych_bnfchapter_type, here('Data','Var_freq_checking','psych_bnfchapter
 
 #_____________________
 
-#Coding ethnicity ----
+#Coding ethnicity ---- [ this relies on info from both cprd and hes ]
 
 #Using CPRD clinical data...
-#CPRD ethnicity codings (ethcodes) from doi: 10.2337/dc16-1616
-#https://clinicalcodes.rss.mhs.man.ac.uk/medcodes/article/56/codelist/res56-ethnicity/
 
 ethcodes <- fread(here('Lookups', 'res56-ethnicity.csv')) [, .(readcode, ethnic5)] %>% #read in ethnicity read codes
                     merge(readtomed, by = 'readcode', all.x = TRUE) #join on readtomed
@@ -174,17 +172,59 @@ ethnic <- ethHES[cohort, on = .(patid)][ #merge onto cohort
 
 #Merge everything together to create 2015/16 outcomes analysis file ----
 
-trends1516 <- readRDS(here('Analysis', 'Processed_data', 'CPRDtrends.rds')) %>% #read trends RDS file (for all the useful info contained in it)
+cprd_1516 <- readRDS(here('Analysis', 'Processed_data', 'CPRDtrends.rds')) %>% #read trends RDS file (for all the useful info contained in it)
   .[studyyear=='2015_2016'] #reduce dataset to just 2015/16 cohort
 
-results <- list(trends1516, ethnic, consult, referral, therapy) %>% reduce(merge, all.x = TRUE, by = 'patid') #merge everything together
+cprd_1516 <- cprd_1516 %>%
+  group_by(patid) %>%
+  filter(incohort == TRUE) %>% 
+  mutate(study_end=c("01/11/2018")) %>%
+  mutate(study_end=as.Date(study_end,"%d/%m/%Y")) %>%
+  mutate(tod=as.Date(tod,"%Y-%m-%d")) %>%
+  mutate(dod=as.Date(tod,"%Y-%m-%d")) %>%
+  mutate(lcd=as.Date(lcd,"%d/%m/%Y")) %>%
+  mutate(censoring_date_cprd=min(tod, dod, lcd, study_end, na.rm=TRUE)) %>%
+  mutate(years_in_study_cprd=round(as.numeric(censoring_date_cprd - as.Date('2016-11-01'))/365, 2)) %>%
+  ungroup()
+
+
+# create factors of demographic variables --------------------------------
+
+cprd_1516 <- cprd_1516 %>% 
+  mutate(gender = factor(gender)) %>% 
+  mutate(age = 2016 - yob) %>%
+  mutate(numconds=select(.,c(ALC:ANO, AST:DEM, DIB:THY)) %>% rowSums(na.rm=TRUE)) %>%
+  mutate(numMHconds=select(.,c(ALC, ANO, DEM, LEA, PSM)) %>% rowSums(na.rm=TRUE)) %>%
+  mutate(comorbidg=ifelse(numconds==0, 1, 
+                          ifelse(numconds==numMHconds, 2, 3))) %>% 
+  mutate(cardiov=select(.,c(CHD, STR, PVD)) %>% rowSums(na.rm=TRUE)) %>%
+  mutate(cardiovasc=ifelse(cardiov>1, 1, cardiov))
+
+cprd_1516$agegroup3 <- cut(cprd_1516$age, breaks=c(-Inf, 44, 64, Inf),
+                                 labels=c("18-44y", "45-64y", "65+y"))  
+cprd_1516$condsgroup <- cut(cprd_1516$numconds, breaks=c(-Inf, 0, 2, Inf),
+                           labels=c("CMD only", "CMD+1/2", "CMD+3+"))  
+cprd_1516$gender <- ordered(cprd_1516$gender, levels=c(1,2), labels=c("Men", "Women"))
+cprd_1516$imd_5f <- as.factor(cprd_1516$imd)
+
+
+# create 3 categories of IMD for visualisation purposes
+cprd_1516 <- cprd_1516 %>% 
+  mutate(imd_3=as.factor(case_when(
+    imd %in% 1 ~ 1,
+    imd %in% 2:4 ~ 2,
+    imd %in% 5 ~ 3,
+  )))
+
+
+results <- list(cprd_1516, ethnic, consult, referral, therapy) %>% reduce(merge, all.x = TRUE, by = 'patid') #merge everything together
 
 saveRDS(results, here('Analysis', 'Processed_data', 'CPRDoutcomes2015_2016.rds')) #save to file
 
 
 #Clean up objects
 rm(a, b, c, d, clinical, cohort, consult, ethcodes, ethCPRD, ethHES, ethnic, missdrugs, prodtodrug, psych_bnfchapter_type, 
-   psych_drug_substance_type, psychprods, readtomed, refcodes, referral, referral_type, staff, therapy, trends1516)
+   psych_drug_substance_type, psychprods, readtomed, refcodes, referral, referral_type, staff, therapy, cprd_1516)
 
 gc() #clean up memory
 
