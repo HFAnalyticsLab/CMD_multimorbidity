@@ -7,28 +7,22 @@
 
 #Setup - Load required packages and set directory/folders ----
 
-pkgs <- c('here', 'tidyverse', 'data.table') #package list
+pkgs <- c('here', 'purrr', 'data.table') #package list
 lapply(pkgs, library, character.only=T) #load packages
 
 here() #check here sees root directory for project
-source('filepaths.R') #get folder path for linked HES data: linkdata
+source(here('filepaths.R')) #get folder path for linked HES data: linkdata
 
 #__________________________________________
 
 #Read in cohort of HES linked patients ----
+cprd_outcomes <- data.table(readRDS(here('Analysis', 'Processed_data', 'CPRDoutcomes2015_2016.rds'))) #read in CPRDtrends dataset
 
-trends <- readRDS(here('Analysis', 'Processed_data', 'CPRDtrends.rds')) #read in CPRDtrends dataset
-
-HESpats <- trends[studyyear == '2015_2016' & hes_e == 1, .(patid, dod, hes_e, studyyear)][ #restrict to HES-linked patids for 2015/16 cohort
-              dod > as.Date('2016-11-01') | is.na(dod)][ #dates of death must be greater than the start of the follow-up period (or NA)
-                dod > as.Date('2018-11-01') | is.na(dod), dod := as.Date('2018-11-01')][ #make NA death dates & those after study end equal study end
-                , studydays := 365*2 - (as.Date('2018-11-01') - dod)][ #calculate time in study in days
-                  , studyyears := round(studydays/365, 3)] #add study time in years
-
+HESpats <- cprd_outcomes[studyyear == '2015_2016' & hes_e == 1 & incohort==1, .(patid, dod, hes_e, studyyear,years_in_study_cprd)][ #restrict to HES-linked patids for 2015/16 cohort
+  years_in_study_cprd>0]
 #_________________________________________________________
 
 #Function for reading in data and editing date fields ----
-
 createDT <- function(filename, keepcols, datecols){
   dt <- fread(paste0(linkdata, filename), select = keepcols) #read data file keeping required columns
   for (i in datecols){ #for each date field...
@@ -105,7 +99,7 @@ op_app <- HESpats[createDT(filename = 'hesop_appointment_19_178.txt', keepcols =
               apptdate >= as.Date('2016-11-01') & apptdate < as.Date('2018-11-01')][ #restrict to appointments in study follow-up period
                 is.na(dod) | apptdate <= as.Date(dod, format = '%d/%m/%Y')] #make sure appointments are before any deaths
                         
-op <- opclin[op_app, on = .(patid, attendkey)][ #merge clinical data onto appointments (as we need the tretspef field)
+op <- op_clin[op_app, on = .(patid, attendkey)][ #merge clinical data onto appointments (as we need the tretspef field)
         tretspef != '&' & !firstatt %in% c('X','9') & attended != 9][ #remove appointments with 'Not known' values
           , `:=`(OPatts = (attended %in% c(5,6)), #categorise attendances... attended appointment
                  OPmiss = (attended %in% c(2,3,4,7)), #missed appointment
@@ -113,20 +107,14 @@ op <- opclin[op_app, on = .(patid, attendkey)][ #merge clinical data onto appoin
                  OPmh_miss = (attended %in% c(2,3,4,7) & tretspef %between% c(700,730)))][ #missed mental health appointment
             HESpats, on = .(patid)][ #join onto HES-linked cohort
               , lapply(.SD, sum, na.rm =TRUE), by = .(patid), .SDcols = c('OPatts','OPmiss','OPmh_atts','OPmh_miss')][ #sum categorised appointments by patient
-                , OPappts := sum(OPatts, OPmiss), by = .(patid)] #add total of categorised appointments
+                , OPappts := sum(OPatts, OPmiss), by = .(patid)][
+                  , OPmh_appts := sum(OPmh_atts, OPmh_miss), by = .(patid)] #add total of categorised appointments
 
 #___________________________________________
 
-#Join together, adjust and save to file ----
+#Join together and save to file ----
 
 hes_outcomes <- HESpats[apc, on = .(patid)][ae, on = .(patid)][op, on = .(patid)] #join everything onto the HES-linked cohort
-
-#list names of columns to be adjusted by time in follow-up
-cols <- c('APCemerg','APCelec','APCmat','APCday','APCoth','APClos','APCmh_spells','APCmh_los', 'APCspells','AEseen','AEplan',
-          'AEunplan','AEoth','AEmh_att','AEatts','OPatts','OPmiss','OPmh_atts','OPmh_miss','OPappts')
-
-#Add variables adjusted for length of time in follow-up (to give 'per year' values)
-hes_outcomes <- hes_outcomes[, (paste0(cols, '_adj')) := lapply(.SD, function(x) x / as.numeric(hes_outcomes[['studyyears']])), .SDcols = cols]
 
 #Save outcomes
 saveRDS(hes_outcomes, here('Analysis', 'Processed_data', 'HESoutcomes.rds')) #merge and save the HES outcomes
